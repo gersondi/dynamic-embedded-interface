@@ -10,6 +10,24 @@
     </script>
     
     <script>
+
+function getRequest {
+	const URL: "https://cbhv.appian.community/suite/webapi/tPmwsw";
+	
+	$.ajax({
+    url: URL,
+    method: "GET",
+    headers: {
+      authorization:
+        "Appian-API-Key eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzNjAzZTFhZS01ZTgzLTQ5YzEtYmMzZi0yMWZiMTljNWVlNmQifQ.KO0YMyT-BMC7w6L5N9wpStUBOBhhiPI_FY6evsRHhhU",
+    },
+  }).then(function(response) {
+    console.log(response);
+  });
+}
+</script>
+    
+    <script>
       /* This function dynamically inserts an <appian-task> element into the page with the user-specified taskId */
       function addTask() {
         var taskId = document.getElementById('new-task').value;
